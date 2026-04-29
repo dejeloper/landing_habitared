@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+:root {
+  --brand-blue: #0f62fe;
+  --brand-cyan: #0ea5e9;
+  --brand-purple: #818cf8;
+  --brand-green: #34d399;
+  --brand-red: #f87171;
+  --brand-amber: #fbbf24;
+
+  --bg-base: #06091a;
+  --bg-layer1: #0a0f2e;
+  --bg-layer2: #0f1535;
+
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(99, 179, 237, 0.15);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --text-link: #60a5fa;
+
+  --border-dim: rgba(99, 179, 237, 0.08);
+  --border-base: rgba(99, 179, 237, 0.15);
+  --border-bright: rgba(99, 179, 237, 0.35);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+  --glow-blue: 0 0 24px rgba(15, 98, 254, 0.4);
+  --glow-cyan: 0 0 24px rgba(14, 165, 233, 0.3);
+
+  --gradient-brand: linear-gradient(135deg, #0f62fe, #0ea5e9);
+}
