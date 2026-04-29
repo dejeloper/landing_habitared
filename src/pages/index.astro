@@ -3,5 +3,356 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1 class="text-red-500">Astro Page 1</h1>
+  <header>
+    <section>Logo</section>
+    <nav>
+      <ul>
+        <li><a href="#features">Características</a></li>
+        <li><a href="#how-it-works">Cómo Funciona</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <button
+        id="cta-button"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        Solicitar Demo
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section id="hero">
+      <h2 class="text-4xl font-bold mb-4">
+        La administración de tu conjunto, simplificada
+      </h2>
+      <h3 class="text-xl mb-6">
+        Digitaliza el control de parqueaderos con lectura de placas, reservas de
+        espacios comunes, acceso al gym y piscina, citofonía y cobros — en una
+        sola plataforma.
+      </h3>
+      <div>
+        <button
+          id="cta-button"
+          class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+        >
+          Solicitar Demo
+        </button>
+        <button
+          id="learn-more-button"
+          class="ml-4 bg-gray-600 text-white px-6 py-3 rounded hover:bg-gray-700 transition"
+        >
+          Conocer Más
+        </button>
+      </div>
+      <div>+200 conjuntos ya digitalizaron su administración</div>
+    </section>
+
+    <section id="stats">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-700 p-6 rounded-lg text-center">
+          <div class="text-3xl mb-2">🏘️</div>
+          <div class="text-2xl font-bold">+200</div>
+          <div class="text-slate-300 font-semibold text-sm mb-1">
+            Conjuntos administrados
+          </div>
+          <div class="text-slate-600 text-xs">en Colombia</div>
+        </div>
+        <div class="bg-slate-700 p-6 rounded-lg text-center">
+          <div class="text-3xl mb-2">👥</div>
+          <div class="text-2xl font-bold">+50K</div>
+          <div class="text-slate-300 font-semibold text-sm mb-1">
+            Residentes activos
+          </div>
+          <div class="text-slate-600 text-xs">en la plataforma</div>
+        </div>
+
+        <div class="bg-slate-700 p-6 rounded-lg text-center">
+          <div class="text-3xl mb-2">⚡</div>
+          <div class="text-2xl font-bold">+1M</div>
+          <div class="text-slate-300 font-semibold text-sm mb-1">
+            Transacciones procesadas
+          </div>
+          <div class="text-slate-600 text-xs">el último año</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h3>Todo lo que neceitas en un solo lugar</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut
+        laudantium rem ex cupiditate assumenda. Impedit ullam omnis libero
+        rerum, maiores illo sapiente fugiat, dolore, ipsa cum aperiam illum
+        aspernatur.
+      </p>
+      <article>
+        <h4>Control de Parqueaderos</h4>
+        <p>
+          Lectura de placas para acceso automático, gestión de visitantes y
+          control total de los espacios de parqueo.
+        </p>
+      </article>
+      <article>
+        <h4>Reservas de Espacios Comunes</h4>
+        <p>
+          Reserva fácil de zonas comunes como el gym, la piscina o el salón
+          social, con confirmaciones instantáneas.
+        </p>
+      </article>
+      <article>
+        <h4>Acceso al Gimnasio y Piscina</h4>
+        <p>
+          Control de acceso seguro a las instalaciones deportivas, con horarios
+          personalizados para cada residente.
+        </p>
+      </article>
+      <article>
+        <h4>Citofonía Digital</h4>
+        <p>
+          Comunicación directa entre residentes y visitantes, con historial de
+          llamadas y notificaciones en tiempo real.
+        </p>
+      </article>
+
+      <button
+        id="cta-button"
+        class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition mt-4"
+      >
+        ¿Quieres verlo en acción? Solicita una demo ahora
+      </button>
+    </section>
+
+    <section id="how-it-works">
+      <h3>Empieza en 3 pasos</h3>
+      <p>
+        Sin complicaciones, sin papeleo. Digitalizar la administración de tu
+        conjunto residencial es tan fácil como seguir estos simples pasos:
+      </p>
+      <ol class="list-decimal list-inside mb-4">
+        <li>
+          <h3>1: Registra tu conjunto</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+            nam quam cumque ratione iste ad ipsam illum tempora. Porro provident
+            facere quas suscipit qui delectus et fugiat accusantium ducimus
+            officia?
+          </p>
+        </li>
+        <li>
+          <h3>2: Activa los módulos</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            voluptate. Doloribus, quisquam. Voluptas, voluptate. Doloribus,
+            quisquam.
+          </p>
+        </li>
+        <li>
+          <h3>3: ¡Administra desde el dashboard!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            voluptate. Doloribus, quisquam. Voluptas, voluptate. Doloribus,
+            quisquam.
+          </p>
+        </li>
+      </ol>
+      <article>
+        <h3>¿Listo para transformar la administración de tu conjunto?</h3>
+        <p>
+          No esperes más para llevar tu conjunto residencial al siguiente nivel.
+          Solicita una demo gratuita y descubre cómo nuestra plataforma puede
+          simplificar tu día a día y mejorar la experiencia de tus residentes.
+        </p>
+        <button
+          id="cta-button"
+          class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition mt-4"
+        >
+          Agendar una demo
+        </button>
+      </article>
+    </section>
+
+    <section id="testimonials">
+      <h3>Lo que dicen nuestros clientes</h3>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+        perspiciatis eligendi quasi unde deleniti expedita eveniet voluptas,
+        magni corrupti facere. Unde facere illo voluptate non sint totam ad
+        tempora inventore!
+      </p>
+      <article class="bg-slate-700 p-6 rounded-lg mb-4">
+        <p>
+          "Desde que implementamos esta plataforma, la administración de nuestro
+          conjunto ha sido mucho más eficiente. La lectura de placas ha
+          simplificado el acceso y las reservas de espacios comunes son un éxito
+          entre los residentes."
+        </p>
+        <div class="mt-4 font-bold">
+          - Juan Pérez, Administrador del Conjunto Los Robles
+        </div>
+      </article>
+      <article class="bg-slate-700 p-6 rounded-lg mb-4">
+        <p>
+          "La citofonía digital ha mejorado la comunicación entre residentes y
+          visitantes. Además, el control de acceso al gym y la piscina ha sido
+          un gran beneficio para nuestra comunidad."
+        </p>
+        <div class="mt-4 font-bold">
+          - María Gómez, Presidenta de la Junta de Acción Comunal del Conjunto
+          El Paraíso
+        </div>
+      </article>
+      <article class="bg-slate-700 p-6 rounded-lg mb-4">
+        <p>
+          "La plataforma ha transformado la forma en que administramos nuestro
+          conjunto. La gestión de parqueaderos y las reservas de espacios
+          comunes son mucho más fáciles, y nuestros residentes están encantados
+          con la experiencia digital."
+        </p>
+        <div class="mt-4 font-bold">
+          - Carlos Rodríguez, Administrador del Conjunto Villa Verde
+        </div>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Transforma la administración de tu conjunto HOY</h2>
+      <p>
+        Solicita una demo gratuita y descubre cómo nuestra plataforma puede
+        simplificar tu día a día y mejorar la experiencia de tus residentes.
+      </p>
+      <article>
+        <ol>
+          <li>
+            <h4>Implementamos en días, no meses</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h4>Seguro y confiable</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h4>App para residentes incluida</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h4>Soporte personalizado</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+        </ol>
+      </article>
+      <article>
+        <h3>Datos de contacto</h3>
+        <p>Email: hola@habitared.tech</p>
+        <p>Teléfono: +57 300 123 4567</p>
+        <p>Dirección: Calle 123 #45-67, Bogotá, Colombia</p>
+      </article>
+      <article>
+        <h3>Solicita tu demo gratuita</h3>
+        <p>Responderemos en menos de 24 horas hábiles.</p>
+        <form method="POST" action="#" class="space-y-5" id="contact-form">
+          <div>
+            <label for="name" class="block mb-1 font-semibold"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+
+          <div>
+            <label for="conjunto" class="block mb-1 font-semibold"
+              >Nombre del Conjunto</label
+            >
+            <input
+              type="text"
+              id="conjunto"
+              name="conjunto"
+              required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block mb-1 font-semibold"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block mt-4 mb-1 font-semibold">
+                Número de Teléfono
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="apartaments" class="block mb-1 font-semibold"
+              >Número de Apartamentos</label
+            >
+            <select
+              id="apartaments"
+              name="apartaments"
+              required
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="1-50">1-50</option>
+              <option value="51-100">51-100</option>
+              <option value="101-200">101-200</option>
+              <option value="201-500">201-500</option>
+              <option value="500+">500+</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block mb-1 font-semibold">Mensaje</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+          >
+            Solicitar Demo
+          </button>
+
+          <p>Sin spam. Sin compromisos.</p>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer class="bg-slate-700 text-center p-4 mt-8">
+    <p>&copy; 2026 Habitared. Todos los derechos reservados.</p>
+    <div class="mt-2">
+      <a href="#" class="text-gray-400 hover:text-gray-200 mx-2"
+        >Política de Privacidad</a
+      >
+      <a href="#" class="text-gray-400 hover:text-gray-200 mx-2"
+        >Términos de Servicio</a
+      >
+      <a href="#" class="text-gray-400 hover:text-gray-200 mx-2">Contacto</a>
+    </div>
+  </footer>
 </Layout>
