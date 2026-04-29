@@ -1,36 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout>
   <Header />
   <main>
-    <section id="hero">
-      <h2 class="text-4xl font-bold mb-4">
-        La administración de tu conjunto, simplificada
-      </h2>
-      <h3 class="text-xl mb-6">
-        Digitaliza el control de parqueaderos con lectura de placas, reservas de
-        espacios comunes, acceso al gym y piscina, citofonía y cobros — en una
-        sola plataforma.
-      </h3>
-      <div>
-        <button
-          id="cta-button"
-          class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-        >
-          Solicitar Demo
-        </button>
-        <button
-          id="learn-more-button"
-          class="ml-4 bg-gray-600 text-white px-6 py-3 rounded hover:bg-gray-700 transition"
-        >
-          Conocer Más
-        </button>
-      </div>
-      <div>+200 conjuntos ya digitalizaron su administración</div>
-    </section>
+    <Hero />
 
     <section id="stats">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
