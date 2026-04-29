@@ -1,26 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout>
-  <header>
-    <section>Logo</section>
-    <nav>
-      <ul>
-        <li><a href="#features">Características</a></li>
-        <li><a href="#how-it-works">Cómo Funciona</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-
-      <button
-        id="cta-button"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-      >
-        Solicitar Demo
-      </button>
-    </nav>
-  </header>
+  <Header />
   <main>
     <section id="hero">
       <h2 class="text-4xl font-bold mb-4">
