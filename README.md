@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-0ea5e9?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/TypeScript-5.x-818cf8?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/pnpm-9.x-34d399?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm" />
+  <img src="https://img.shields.io/badge/GSAP-3.x-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
 </p>
 
 > Landing page de **HABITARED** — plataforma moderna para la gestión de comunidades residenciales.  
@@ -21,6 +22,7 @@
 - [Estructura del proyecto](#-estructura-del-proyecto)
 - [Secciones de la landing](#-secciones-de-la-landing)
 - [Paleta de colores](#-paleta-de-colores)
+- [Animaciones (GSAP)](#-animaciones-gsap)
 - [Comandos](#-comandos)
 - [Requisitos](#-requisitos)
 
@@ -83,6 +85,12 @@ El design system usa un tema **dark** con glassmorphism. Las variables principal
 | `--text-primary` | ![#f1f5f9](https://via.placeholder.com/14/f1f5f9/f1f5f9.png) | `#f1f5f9` | Títulos y texto importante   |
 
 > Ver [`COLOR_PALETTE.md`](./COLOR_PALETTE.md) para la documentación completa del design system.
+
+---
+
+## 🎬 Animaciones (GSAP)
+
+Las animaciones se implementan con [GSAP](https://gsap.com/) + el plugin `ScrollTrigger`, instalado como dependencia de producción (`pnpm add gsap`).
 
 ---
 
