@@ -1,0 +1,136 @@
+---
+const steps = [
+  {
+    number: "01",
+    icon: "🏗️",
+    title: "Registra tu conjunto",
+    description:
+      "Configura los datos de tu copropiedad en menos de 30 minutos: apartamentos, torres, parqueaderos, espacios comunes y residentes.",
+    detail: "Sin instalaciones complejas. Todo desde el navegador.",
+  },
+  {
+    number: "02",
+    icon: "⚡",
+    title: "Activa los módulos",
+    description:
+      "Elige los módulos que necesitas: parqueaderos, reservas, gym, piscina, citofonía o cobros. Paga solo por lo que usas.",
+    detail: "Módulos independientes, plataforma unificada.",
+  },
+  {
+    number: "03",
+    icon: "🎯",
+    title: "Administra desde el dashboard",
+    description:
+      "Tú y tu equipo gestionan todo desde un único panel. Los residentes desde su app. Todo en tiempo real.",
+    detail: "Web + App móvil para residentes incluida.",
+  },
+];
+---
+
+<section
+  id="como-funciona"
+  class="relative bg-slate-900 py-24 lg:py-32 overflow-hidden"
+>
+  <div
+    class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div
+    class="absolute inset-0 overflow-hidden pointer-events-none"
+    aria-hidden="true"
+  >
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-100 bg-blue-400/3 rounded-full blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 lg:mb-20">
+      <div
+        class="inline-flex items-center gap-2 bg-blue-400/10 border border-blue-400/20 rounded-full px-4 py-1.5 mb-5"
+      >
+        <span class="text-blue-400 text-sm font-semibold">Simple y rápido</span>
+      </div>
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight"
+      >
+        Empieza en 3 pasos
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        Sin instalaciones técnicas, sin semanas de implementación. Tu conjunto
+        digitalizado en días.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 lg:gap-10 relative">
+      <div
+        class="hidden lg:block absolute top-10 left-1/6 right-1/6 h-px border-t-2 border-dashed border-slate-700"
+        aria-hidden="true"
+      >
+      </div>
+
+      {
+        steps.map((step, i) => (
+          <div class="relative flex flex-col items-center text-center cursor-default">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-slate-800 border-2 border-blue-400/30 rounded-3xl flex flex-col items-center justify-center shadow-lg shadow-blue-400/5 relative z-10">
+                <span class="text-3xl mb-0.5">{step.icon}</span>
+              </div>
+              <div class="absolute -top-2 -right-2 w-7 h-7 bg-blue-400 rounded-full flex items-center justify-center z-20">
+                <span class="text-slate-950 text-xs font-extrabold">
+                  {i + 1}
+                </span>
+              </div>
+            </div>
+
+            <h3 class="text-white font-bold text-xl mb-3">{step.title}</h3>
+            <p class="text-slate-400 leading-relaxed mb-4 text-sm max-w-xs">
+              {step.description}
+            </p>
+            <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 bg-slate-800 border border-slate-700 rounded-full px-3 py-1.5">
+              <svg
+                class="w-3.5 h-3.5 text-blue-400/60"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              {step.detail}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+
+    <div
+      class="mt-20 bg-linear-to-r from-blue-400/10 via-blue-400/5 to-transparent border border-blue-400/20 rounded-2xl p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-6"
+    >
+      <div>
+        <h3 class="text-white font-bold text-xl lg:text-2xl mb-2">
+          ¿Listo para digitalizar tu conjunto?
+        </h3>
+        <p class="text-slate-400">
+          Agenda una demo personalizada y te mostramos todo en 30 minutos.
+        </p>
+      </div>
+      <a
+        href="#contacto"
+        class="shrink-0 bg-blue-400 hover:bg-blue-500 text-slate-950 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-400/30 whitespace-nowrap"
+      >
+        Agendar demo →
+      </a>
+    </div>
+  </div>
+</section>
