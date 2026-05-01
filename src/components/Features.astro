@@ -1,110 +1,134 @@
 ---
-interface Feature {
-  icon: string;
-  title: string;
-  desc: string;
-  color: string;
-}
-
-let features: Feature[] = [
+const modules = [
   {
-    icon: "residents",
-    title: "Gestión de Residentes",
-    desc: "Administra propietarios, arrendatarios y datos de contacto desde un panel centralizado.",
-    color: "#0ea5e9",
+    icon: "🚗",
+    color: "amber",
+    badge: "IA",
+    title: "Control de Parqueaderos",
+    description:
+      "Lectura automática de placas con inteligencia artificial. Asigna parqueaderos a residentes y visitantes, registra tiempos y genera cobros automáticamente.",
+    features: ["Lectura de placas con IA", "Cobro automático por uso", "Historial de ingresos/salidas"],
   },
   {
-    icon: "visitors",
-    title: "Control de Visitantes",
-    desc: "Pre-autoriza visitas con código QR. El guarda valida desde su dispositivo en segundos.",
-    color: "#8b5cf6",
+    icon: "📅",
+    color: "indigo",
+    badge: "Nuevo",
+    title: "Reserva de Espacios Comunes",
+    description:
+      "Permite a los residentes reservar salones comunales, zonas de juegos, BBQ y terrazas desde el app. Sin llamadas, sin papeles.",
+    features: ["Calendario en tiempo real", "Confirmación automática", "Pagos de depósito integrados"],
   },
   {
-    icon: "parking",
-    title: "Reconocimiento LPR",
-    desc: "Acceso vehicular automatizado con lectura de placas y registro fotográfico.",
-    color: "#10b981",
+    icon: "🏋️",
+    color: "emerald",
+    badge: null,
+    title: "Acceso al Gimnasio",
+    description:
+      "Controla la entrada y salida del gym con cupos configurables por horario. Lleva el historial de uso de cada residente.",
+    features: ["Control de aforo en tiempo real", "Historial por residente", "Alertas de cupos llenos"],
   },
   {
-    icon: "calendar",
-    title: "Reservas Comunes",
-    desc: "Agenda, disponibilidad y confirmación automática de salones, piscina y BBQ.",
-    color: "#f59e0b",
+    icon: "🏊",
+    color: "sky",
+    badge: null,
+    title: "Acceso a la Piscina",
+    description:
+      "Gestiona el acceso a la piscina con registro digital de entrada y salida, horarios y restricciones de aforo de forma automática.",
+    features: ["Control de aforo por franjas", "Registro de visitantes", "Restricciones configurables"],
   },
   {
-    icon: "shield",
-    title: "Roles y Permisos",
-    desc: "Control granular para Admin, Guarda, Propietario y Residente con acceso justo.",
-    color: "#ef4444",
+    icon: "📞",
+    color: "violet",
+    badge: "Digital",
+    title: "Citofonía Digital",
+    description:
+      "Moderniza las comunicaciones del conjunto. Gestiona visitas esperadas, autoriza accesos y mantén un registro de todas las interacciones.",
+    features: ["Autorización de visitas por app", "Registro de llamadas", "Notificaciones push"],
   },
   {
-    icon: "audit",
-    title: "Auditoría Completa",
-    desc: "Logs inmutables de cada acción. Trazabilidad total para cumplimiento normativo.",
-    color: "#0f62fe",
+    icon: "💰",
+    color: "rose",
+    badge: "Auto",
+    title: "Cobros y Administración",
+    description:
+      "Liquidación automática de cuotas de administración y servicios adicionales. Dashboard financiero con estado de cartera en tiempo real.",
+    features: ["Liquidación automática", "Gestión de cartera morosa", "Reportes financieros"],
   },
 ];
+
+const colorMap: Record<string, { bg: string; border: string; text: string; badge: string }> = {
+  amber:   { bg: "bg-amber-400/10",   border: "border-amber-400/20",   text: "text-amber-400",   badge: "bg-amber-400/15 text-amber-400" },
+  indigo:  { bg: "bg-indigo-400/10",  border: "border-indigo-400/20",  text: "text-indigo-400",  badge: "bg-indigo-400/15 text-indigo-400" },
+  emerald: { bg: "bg-emerald-400/10", border: "border-emerald-400/20", text: "text-emerald-400", badge: "bg-emerald-400/15 text-emerald-400" },
+  sky:     { bg: "bg-sky-400/10",     border: "border-sky-400/20",     text: "text-sky-400",     badge: "bg-sky-400/15 text-sky-400" },
+  violet:  { bg: "bg-violet-400/10",  border: "border-violet-400/20",  text: "text-violet-400",  badge: "bg-violet-400/15 text-violet-400" },
+  rose:    { bg: "bg-rose-400/10",    border: "border-rose-400/20",    text: "text-rose-400",    badge: "bg-rose-400/15 text-rose-400" },
+};
 ---
 
-<section id="features" class="py-24 px-6" style="background: var(--bg-base);">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <h3
-        class="text-3xl md:text-4xl font-black mb-4"
-        style="color: var(--text-primary);"
-      >
-        Todo lo que necesitas en un solo lugar
-      </h3>
-      <p
-        class="max-w-2xl mx-auto text-base"
-        style="color: var(--text-secondary);"
-      >
-        Una plataforma integral que centraliza cada proceso de tu conjunto
-        residencial, desde el acceso hasta la facturación, con visibilidad en
-        tiempo real.
+<section id="caracteristicas" class="relative bg-slate-950 py-24 lg:py-32 overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent" aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 lg:mb-20">
+      <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-1.5 mb-5">
+        <span class="text-blue-400 text-sm font-semibold">6 módulos</span>
+        <span class="text-slate-500 text-sm">·</span>
+        <span class="text-slate-400 text-sm">una sola plataforma</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
+        Todo lo que necesitas<br class="hidden sm:block" /> en un solo lugar
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        Habitared unifica cada módulo de tu conjunto en un único dashboard. Sin integraciones complejas, sin múltiples sistemas — solo una plataforma que funciona.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        features.map((feature) => (
-          <article
-            class="p-6 rounded-2xl border transition-all hover:-translate-y-1"
-            style="background: var(--glass-bg); border-color: var(--glass-border); box-shadow: var(--shadow-sm);"
-          >
-            <div
-              class="w-12 h-12 flex items-center justify-center rounded-xl mb-4 text-white"
-              style={`background-color: ${feature.color}26; border: 1px solid ${feature.color}40;`}
-            >
-              <div
-                class="w-5 h-5 rounded-full"
-                style={`background-color: ${feature.color};`}
-              />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {modules.map((mod) => {
+        const c = colorMap[mod.color];
+        return (
+          <div class="group relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-950/60 cursor-default">
+            <!-- Icon + badge row -->
+            <div class="flex items-start justify-between mb-5">
+              <div class={`w-12 h-12 ${c.bg} ${c.border} border rounded-2xl flex items-center justify-center text-2xl`}>
+                {mod.icon}
+              </div>
+              {mod.badge && (
+                <span class={`text-xs font-bold px-2.5 py-1 rounded-full ${c.badge}`}>
+                  {mod.badge}
+                </span>
+              )}
             </div>
-            <h4
-              class="text-base font-bold mb-2"
-              style="color: var(--text-primary);"
-            >
-              {feature.title}
-            </h4>
-            <p
-              class="text-sm leading-relaxed"
-              style="color: var(--text-secondary);"
-            >
-              {feature.desc}
-            </p>
-          </article>
-        ))
-      }
+
+            <h3 class="text-white font-bold text-lg mb-2.5">{mod.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-5">{mod.description}</p>
+
+            <ul class="space-y-1.5">
+              {mod.features.map((feat) => (
+                <li class="flex items-center gap-2 text-sm text-slate-500">
+                  <svg class={`w-4 h-4 shrink-0 ${c.text}`} fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  {feat}
+                </li>
+              ))}
+            </ul>
+
+            <div class={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${c.bg}`} aria-hidden="true"></div>
+          </div>
+        );
+      })}
     </div>
 
-    <div class="text-center mt-12">
-      <a
-        href="#contact"
-        class="inline-block px-8 py-3.5 rounded-xl text-white font-semibold transition-all hover:opacity-90 hover:-translate-y-0.5"
-        style="background: var(--gradient-brand); box-shadow: var(--glow-blue);"
+    <div class="text-center mt-14">
+      <a href="#contacto"
+        class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-base transition-colors group"
       >
-        ¿Quieres verlo en acción? Solicita una demo ahora
+        ¿Quieres verlo en acción? Solicita una demo
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </a>
     </div>
   </div>
