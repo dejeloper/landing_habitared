@@ -396,3 +396,49 @@ const avatars = [
     </svg>
   </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const section = document.querySelector("section");
+  const grid = document.querySelector(".grid.lg\\:grid-cols-2");
+  const left = grid?.children[0] as HTMLElement;
+  const right = grid?.children[1] as HTMLElement;
+
+  gsap.set(grid, {
+    display: "flex",
+    alignItems: "center",
+  });
+  gsap.set(left, { flexShrink: 0, width: "50%" });
+  gsap.set(right, { flexShrink: 0, width: "50%" });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",
+      end: "+=600",
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1,
+    },
+  });
+
+  tl.to(left, {
+    opacity: 0,
+    xPercent: -15,
+    width: "0%",
+    duration: 1,
+    ease: "power2.inOut",
+  }).to(
+    right,
+    {
+      width: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+    },
+    "<",
+  );
+</script>
