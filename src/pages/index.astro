@@ -5,6 +5,7 @@ import Hero from "../components/Hero.astro";
 import Stats from "../components/Stats.astro";
 import Features from "../components/Features.astro";
 import HowItWorks from "../components/HowItWorks.astro";
+import Testimonials from "../components/Testimonials.astro";
 ---
 
 <Layout>
@@ -14,50 +15,7 @@ import HowItWorks from "../components/HowItWorks.astro";
     <Stats />
     <Features />
     <HowItWorks />
-
-    <section id="testimonials">
-      <h3>Lo que dicen nuestros clientes</h3>
-
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-        perspiciatis eligendi quasi unde deleniti expedita eveniet voluptas,
-        magni corrupti facere. Unde facere illo voluptate non sint totam ad
-        tempora inventore!
-      </p>
-      <article class="bg-slate-700 p-6 rounded-lg mb-4">
-        <p>
-          "Desde que implementamos esta plataforma, la administración de nuestro
-          conjunto ha sido mucho más eficiente. La lectura de placas ha
-          simplificado el acceso y las reservas de espacios comunes son un éxito
-          entre los residentes."
-        </p>
-        <div class="mt-4 font-bold">
-          - Juan Pérez, Administrador del Conjunto Los Robles
-        </div>
-      </article>
-      <article class="bg-slate-700 p-6 rounded-lg mb-4">
-        <p>
-          "La citofonía digital ha mejorado la comunicación entre residentes y
-          visitantes. Además, el control de acceso al gym y la piscina ha sido
-          un gran beneficio para nuestra comunidad."
-        </p>
-        <div class="mt-4 font-bold">
-          - María Gómez, Presidenta de la Junta de Acción Comunal del Conjunto
-          El Paraíso
-        </div>
-      </article>
-      <article class="bg-slate-700 p-6 rounded-lg mb-4">
-        <p>
-          "La plataforma ha transformado la forma en que administramos nuestro
-          conjunto. La gestión de parqueaderos y las reservas de espacios
-          comunes son mucho más fáciles, y nuestros residentes están encantados
-          con la experiencia digital."
-        </p>
-        <div class="mt-4 font-bold">
-          - Carlos Rodríguez, Administrador del Conjunto Villa Verde
-        </div>
-      </article>
-    </section>
+    <Testimonials />
 
     <section id="contact">
       <h2>Transforma la administración de tu conjunto HOY</h2>

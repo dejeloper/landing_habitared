@@ -7,7 +7,11 @@ const modules = [
     title: "Control de Parqueaderos",
     description:
       "Lectura automática de placas con inteligencia artificial. Asigna parqueaderos a residentes y visitantes, registra tiempos y genera cobros automáticamente.",
-    features: ["Lectura de placas con IA", "Cobro automático por uso", "Historial de ingresos/salidas"],
+    features: [
+      "Lectura de placas con IA",
+      "Cobro automático por uso",
+      "Historial de ingresos/salidas",
+    ],
   },
   {
     icon: "📅",
@@ -16,7 +20,11 @@ const modules = [
     title: "Reserva de Espacios Comunes",
     description:
       "Permite a los residentes reservar salones comunales, zonas de juegos, BBQ y terrazas desde el app. Sin llamadas, sin papeles.",
-    features: ["Calendario en tiempo real", "Confirmación automática", "Pagos de depósito integrados"],
+    features: [
+      "Calendario en tiempo real",
+      "Confirmación automática",
+      "Pagos de depósito integrados",
+    ],
   },
   {
     icon: "🏋️",
@@ -25,7 +33,11 @@ const modules = [
     title: "Acceso al Gimnasio",
     description:
       "Controla la entrada y salida del gym con cupos configurables por horario. Lleva el historial de uso de cada residente.",
-    features: ["Control de aforo en tiempo real", "Historial por residente", "Alertas de cupos llenos"],
+    features: [
+      "Control de aforo en tiempo real",
+      "Historial por residente",
+      "Alertas de cupos llenos",
+    ],
   },
   {
     icon: "🏊",
@@ -34,7 +46,11 @@ const modules = [
     title: "Acceso a la Piscina",
     description:
       "Gestiona el acceso a la piscina con registro digital de entrada y salida, horarios y restricciones de aforo de forma automática.",
-    features: ["Control de aforo por franjas", "Registro de visitantes", "Restricciones configurables"],
+    features: [
+      "Control de aforo por franjas",
+      "Registro de visitantes",
+      "Restricciones configurables",
+    ],
   },
   {
     icon: "📞",
@@ -43,7 +59,11 @@ const modules = [
     title: "Citofonía Digital",
     description:
       "Moderniza las comunicaciones del conjunto. Gestiona visitas esperadas, autoriza accesos y mantén un registro de todas las interacciones.",
-    features: ["Autorización de visitas por app", "Registro de llamadas", "Notificaciones push"],
+    features: [
+      "Autorización de visitas por app",
+      "Registro de llamadas",
+      "Notificaciones push",
+    ],
   },
   {
     icon: "💰",
@@ -52,82 +72,160 @@ const modules = [
     title: "Cobros y Administración",
     description:
       "Liquidación automática de cuotas de administración y servicios adicionales. Dashboard financiero con estado de cartera en tiempo real.",
-    features: ["Liquidación automática", "Gestión de cartera morosa", "Reportes financieros"],
+    features: [
+      "Liquidación automática",
+      "Gestión de cartera morosa",
+      "Reportes financieros",
+    ],
   },
 ];
 
-const colorMap: Record<string, { bg: string; border: string; text: string; badge: string }> = {
-  amber:   { bg: "bg-amber-400/10",   border: "border-amber-400/20",   text: "text-amber-400",   badge: "bg-amber-400/15 text-amber-400" },
-  indigo:  { bg: "bg-indigo-400/10",  border: "border-indigo-400/20",  text: "text-indigo-400",  badge: "bg-indigo-400/15 text-indigo-400" },
-  emerald: { bg: "bg-emerald-400/10", border: "border-emerald-400/20", text: "text-emerald-400", badge: "bg-emerald-400/15 text-emerald-400" },
-  sky:     { bg: "bg-sky-400/10",     border: "border-sky-400/20",     text: "text-sky-400",     badge: "bg-sky-400/15 text-sky-400" },
-  violet:  { bg: "bg-violet-400/10",  border: "border-violet-400/20",  text: "text-violet-400",  badge: "bg-violet-400/15 text-violet-400" },
-  rose:    { bg: "bg-rose-400/10",    border: "border-rose-400/20",    text: "text-rose-400",    badge: "bg-rose-400/15 text-rose-400" },
+const colorMap: Record<
+  string,
+  { bg: string; border: string; text: string; badge: string }
+> = {
+  amber: {
+    bg: "bg-amber-400/10",
+    border: "border-amber-400/20",
+    text: "text-amber-400",
+    badge: "bg-amber-400/15 text-amber-400",
+  },
+  indigo: {
+    bg: "bg-indigo-400/10",
+    border: "border-indigo-400/20",
+    text: "text-indigo-400",
+    badge: "bg-indigo-400/15 text-indigo-400",
+  },
+  emerald: {
+    bg: "bg-emerald-400/10",
+    border: "border-emerald-400/20",
+    text: "text-emerald-400",
+    badge: "bg-emerald-400/15 text-emerald-400",
+  },
+  sky: {
+    bg: "bg-sky-400/10",
+    border: "border-sky-400/20",
+    text: "text-sky-400",
+    badge: "bg-sky-400/15 text-sky-400",
+  },
+  violet: {
+    bg: "bg-violet-400/10",
+    border: "border-violet-400/20",
+    text: "text-violet-400",
+    badge: "bg-violet-400/15 text-violet-400",
+  },
+  rose: {
+    bg: "bg-rose-400/10",
+    border: "border-rose-400/20",
+    text: "text-rose-400",
+    badge: "bg-rose-400/15 text-rose-400",
+  },
 };
 ---
 
-<section id="caracteristicas" class="relative bg-slate-950 py-24 lg:py-32 overflow-hidden">
-  <div class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent" aria-hidden="true"></div>
+<section
+  id="caracteristicas"
+  class="relative bg-slate-950 py-24 lg:py-32 overflow-hidden"
+>
+  <div
+    class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 lg:mb-20">
-      <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-1.5 mb-5">
+      <div
+        class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-1.5 mb-5"
+      >
         <span class="text-blue-400 text-sm font-semibold">6 módulos</span>
         <span class="text-slate-500 text-sm">·</span>
         <span class="text-slate-400 text-sm">una sola plataforma</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight"
+      >
         Todo lo que necesitas<br class="hidden sm:block" /> en un solo lugar
       </h2>
       <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        Habitared unifica cada módulo de tu conjunto en un único dashboard. Sin integraciones complejas, sin múltiples sistemas — solo una plataforma que funciona.
+        Habitared unifica cada módulo de tu conjunto en un único dashboard. Sin
+        integraciones complejas, sin múltiples sistemas — solo una plataforma
+        que funciona.
       </p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {modules.map((mod) => {
-        const c = colorMap[mod.color];
-        return (
-          <div class="group relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-950/60 cursor-default">
-            <!-- Icon + badge row -->
-            <div class="flex items-start justify-between mb-5">
-              <div class={`w-12 h-12 ${c.bg} ${c.border} border rounded-2xl flex items-center justify-center text-2xl`}>
-                {mod.icon}
+      {
+        modules.map((mod) => {
+          const c = colorMap[mod.color];
+          return (
+            <div class="group relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-950/60 cursor-default">
+              <div class="flex items-start justify-between mb-5">
+                <div
+                  class={`w-12 h-12 ${c.bg} ${c.border} border rounded-2xl flex items-center justify-center text-2xl`}
+                >
+                  {mod.icon}
+                </div>
+                {mod.badge && (
+                  <span
+                    class={`text-xs font-bold px-2.5 py-1 rounded-full ${c.badge}`}
+                  >
+                    {mod.badge}
+                  </span>
+                )}
               </div>
-              {mod.badge && (
-                <span class={`text-xs font-bold px-2.5 py-1 rounded-full ${c.badge}`}>
-                  {mod.badge}
-                </span>
-              )}
+
+              <h3 class="text-white font-bold text-lg mb-2.5">{mod.title}</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">
+                {mod.description}
+              </p>
+
+              <ul class="space-y-1.5">
+                {mod.features.map((feat) => (
+                  <li class="flex items-center gap-2 text-sm text-slate-500">
+                    <svg
+                      class={`w-4 h-4 shrink-0 ${c.text}`}
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    {feat}
+                  </li>
+                ))}
+              </ul>
+
+              <div
+                class={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${c.bg}`}
+                aria-hidden="true"
+              />
             </div>
-
-            <h3 class="text-white font-bold text-lg mb-2.5">{mod.title}</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-5">{mod.description}</p>
-
-            <ul class="space-y-1.5">
-              {mod.features.map((feat) => (
-                <li class="flex items-center gap-2 text-sm text-slate-500">
-                  <svg class={`w-4 h-4 shrink-0 ${c.text}`} fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                  {feat}
-                </li>
-              ))}
-            </ul>
-
-            <div class={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${c.bg}`} aria-hidden="true"></div>
-          </div>
-        );
-      })}
+          );
+        })
+      }
     </div>
 
     <div class="text-center mt-14">
-      <a href="#contacto"
+      <a
+        href="#contacto"
         class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-base transition-colors group"
       >
         ¿Quieres verlo en acción? Solicita una demo
-        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        <svg
+          class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>
     </div>
