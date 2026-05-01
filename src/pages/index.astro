@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Stats from "../components/Stats.astro";
+import Features from "../components/Features.astro";
 ---
 
 <Layout>
@@ -10,51 +11,7 @@ import Stats from "../components/Stats.astro";
   <main>
     <Hero />
     <Stats />
-
-    <section id="features">
-      <h3>Todo lo que neceitas en un solo lugar</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut
-        laudantium rem ex cupiditate assumenda. Impedit ullam omnis libero
-        rerum, maiores illo sapiente fugiat, dolore, ipsa cum aperiam illum
-        aspernatur.
-      </p>
-      <article>
-        <h4>Control de Parqueaderos</h4>
-        <p>
-          Lectura de placas para acceso automático, gestión de visitantes y
-          control total de los espacios de parqueo.
-        </p>
-      </article>
-      <article>
-        <h4>Reservas de Espacios Comunes</h4>
-        <p>
-          Reserva fácil de zonas comunes como el gym, la piscina o el salón
-          social, con confirmaciones instantáneas.
-        </p>
-      </article>
-      <article>
-        <h4>Acceso al Gimnasio y Piscina</h4>
-        <p>
-          Control de acceso seguro a las instalaciones deportivas, con horarios
-          personalizados para cada residente.
-        </p>
-      </article>
-      <article>
-        <h4>Citofonía Digital</h4>
-        <p>
-          Comunicación directa entre residentes y visitantes, con historial de
-          llamadas y notificaciones en tiempo real.
-        </p>
-      </article>
-
-      <button
-        id="cta-button"
-        class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition mt-4"
-      >
-        ¿Quieres verlo en acción? Solicita una demo ahora
-      </button>
-    </section>
+    <Features />
 
     <section id="how-it-works">
       <h3>Empieza en 3 pasos</h3>

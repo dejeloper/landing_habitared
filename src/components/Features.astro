@@ -1,0 +1,111 @@
+---
+interface Feature {
+  icon: string;
+  title: string;
+  desc: string;
+  color: string;
+}
+
+let features: Feature[] = [
+  {
+    icon: "residents",
+    title: "Gestión de Residentes",
+    desc: "Administra propietarios, arrendatarios y datos de contacto desde un panel centralizado.",
+    color: "#0ea5e9",
+  },
+  {
+    icon: "visitors",
+    title: "Control de Visitantes",
+    desc: "Pre-autoriza visitas con código QR. El guarda valida desde su dispositivo en segundos.",
+    color: "#8b5cf6",
+  },
+  {
+    icon: "parking",
+    title: "Reconocimiento LPR",
+    desc: "Acceso vehicular automatizado con lectura de placas y registro fotográfico.",
+    color: "#10b981",
+  },
+  {
+    icon: "calendar",
+    title: "Reservas Comunes",
+    desc: "Agenda, disponibilidad y confirmación automática de salones, piscina y BBQ.",
+    color: "#f59e0b",
+  },
+  {
+    icon: "shield",
+    title: "Roles y Permisos",
+    desc: "Control granular para Admin, Guarda, Propietario y Residente con acceso justo.",
+    color: "#ef4444",
+  },
+  {
+    icon: "audit",
+    title: "Auditoría Completa",
+    desc: "Logs inmutables de cada acción. Trazabilidad total para cumplimiento normativo.",
+    color: "#0f62fe",
+  },
+];
+---
+
+<section id="features" class="py-24 px-6" style="background: var(--bg-base);">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h3
+        class="text-3xl md:text-4xl font-black mb-4"
+        style="color: var(--text-primary);"
+      >
+        Todo lo que necesitas en un solo lugar
+      </h3>
+      <p
+        class="max-w-2xl mx-auto text-base"
+        style="color: var(--text-secondary);"
+      >
+        Una plataforma integral que centraliza cada proceso de tu conjunto
+        residencial, desde el acceso hasta la facturación, con visibilidad en
+        tiempo real.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        features.map((feature) => (
+          <article
+            class="p-6 rounded-2xl border transition-all hover:-translate-y-1"
+            style="background: var(--glass-bg); border-color: var(--glass-border); box-shadow: var(--shadow-sm);"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-xl mb-4 text-white"
+              style={`background-color: ${feature.color}26; border: 1px solid ${feature.color}40;`}
+            >
+              <div
+                class="w-5 h-5 rounded-full"
+                style={`background-color: ${feature.color};`}
+              />
+            </div>
+            <h4
+              class="text-base font-bold mb-2"
+              style="color: var(--text-primary);"
+            >
+              {feature.title}
+            </h4>
+            <p
+              class="text-sm leading-relaxed"
+              style="color: var(--text-secondary);"
+            >
+              {feature.desc}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="text-center mt-12">
+      <a
+        href="#contact"
+        class="inline-block px-8 py-3.5 rounded-xl text-white font-semibold transition-all hover:opacity-90 hover:-translate-y-0.5"
+        style="background: var(--gradient-brand); box-shadow: var(--glow-blue);"
+      >
+        ¿Quieres verlo en acción? Solicita una demo ahora
+      </a>
+    </div>
+  </div>
+</section>
