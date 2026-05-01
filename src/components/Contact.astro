@@ -1,0 +1,294 @@
+---
+const valueProps = [
+  {
+    icon: "🚀",
+    title: "Implementación en días, no meses",
+    description: "Configura tu conjunto y empieza a operar en 48 horas.",
+  },
+  {
+    icon: "🔒",
+    title: "Seguro y confiable",
+    description:
+      "Datos cifrados, backups automáticos y 99.9% de disponibilidad.",
+  },
+  {
+    icon: "📱",
+    title: "App para residentes incluida",
+    description:
+      "Sin costos adicionales. Cada residente puede descargar la app.",
+  },
+  {
+    icon: "🤝",
+    title: "Soporte personalizado",
+    description: "Acompañamiento en la configuración y soporte continuo.",
+  },
+];
+
+const apartmentRanges = [
+  "1 – 50 apartamentos",
+  "51 – 150 apartamentos",
+  "151 – 300 apartamentos",
+  "300+ apartamentos",
+];
+---
+
+<section
+  id="contacto"
+  class="relative bg-slate-900 py-24 lg:py-32 overflow-hidden"
+>
+  <div
+    class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div
+    class="absolute inset-0 overflow-hidden pointer-events-none"
+    aria-hidden="true"
+  >
+    <div
+      class="absolute -top-20 -left-20 w-100 h-100 bg-blue-400/5 rounded-full blur-3xl"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 right-0 w-75 h-75 bg-indigo-500/5 rounded-full blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
+      <div>
+        <div
+          class="inline-flex items-center gap-2 bg-blue-400/10 border border-blue-400/20 rounded-full px-4 py-1.5 mb-6"
+        >
+          <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+          <span class="text-blue-400 text-sm font-semibold"
+            >Demo gratuita · Sin compromiso</span
+          >
+        </div>
+
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight leading-tight"
+        >
+          Transforma la administración de tu conjunto hoy
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-10">
+          Agenda una demo de 30 minutos y te mostramos cómo Habitared se adapta
+          exactamente a las necesidades de tu copropiedad.
+        </p>
+
+        <div class="space-y-5">
+          {
+            valueProps.map((vp) => (
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-xl shrink-0 mt-0.5">
+                  {vp.icon}
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">
+                    {vp.title}
+                  </h4>
+                  <p class="text-slate-500 text-sm leading-relaxed">
+                    {vp.description}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div
+          class="mt-10 pt-8 border-t border-slate-800 flex flex-col sm:flex-row gap-5"
+        >
+          <a
+            href="mailto:hola@habitared.tech"
+            class="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group"
+          >
+            <div
+              class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <span class="text-sm">hola@habitared.tech</span>
+          </a>
+          <a
+            href="https://wa.me/573001234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group"
+          >
+            <div
+              class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-emerald-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                ></path>
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.121 1.524 5.855L0 24l6.335-1.506A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.64-.494-5.163-1.358l-.371-.22-3.762.894.944-3.653-.242-.377A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+                ></path>
+              </svg>
+            </div>
+            <span class="text-sm">+57 300 123 4567</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="bg-slate-950/60 border border-slate-800 rounded-3xl p-8 lg:p-10"
+      >
+        <h3 class="text-white font-bold text-xl mb-2">
+          Solicita tu demo gratuita
+        </h3>
+        <p class="text-slate-500 text-sm mb-7">
+          Responderemos en menos de 24 horas hábiles.
+        </p>
+
+        <form method="POST" action="#" class="space-y-5" id="contact-form">
+          <div>
+            <label
+              for="name"
+              class="block text-slate-300 text-sm font-medium mb-2"
+              >Nombre completo *</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="María González"
+              class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm transition-colors"
+            />
+          </div>
+
+          <div>
+            <label
+              for="conjunto"
+              class="block text-slate-300 text-sm font-medium mb-2"
+              >Nombre del conjunto / empresa *</label
+            >
+            <input
+              type="text"
+              id="conjunto"
+              name="conjunto"
+              required
+              placeholder="Conjunto Los Pinos"
+              class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm transition-colors"
+            />
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label
+                for="email"
+                class="block text-slate-300 text-sm font-medium mb-2"
+                >Correo electrónico *</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="maria@example.com"
+                class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm transition-colors"
+              />
+            </div>
+            <div>
+              <label
+                for="phone"
+                class="block text-slate-300 text-sm font-medium mb-2"
+                >Teléfono / WhatsApp</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+57 300 000 0000"
+                class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="apartments"
+              class="block text-slate-300 text-sm font-medium mb-2"
+              >Número de apartamentos</label
+            >
+            <select
+              id="apartments"
+              name="apartments"
+              class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-slate-300 text-sm transition-colors appearance-none"
+            >
+              <option value="" disabled selected class="text-slate-600"
+                >Selecciona un rango</option
+              >
+              {
+                apartmentRanges.map((range) => (
+                  <option value={range} class="bg-slate-800">
+                    {range}
+                  </option>
+                ))
+              }
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="message"
+              class="block text-slate-300 text-sm font-medium mb-2"
+              >¿Qué módulos te interesan más?</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows={3}
+              placeholder="Ej: Principalmente parqueaderos con lectura de placas y reservas del salón comunal..."
+              class="w-full bg-slate-800/60 border border-slate-700 focus:border-blue-400 focus:outline-none rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm transition-colors resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-400 hover:bg-blue-500 text-slate-950 font-bold py-4 rounded-xl transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-400/25 flex items-center justify-center gap-2"
+          >
+            Solicitar Demo Gratuita
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </button>
+
+          <p class="text-slate-600 text-xs text-center">
+            Sin spam. Sin compromiso. Puedes darte de baja en cualquier momento.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
