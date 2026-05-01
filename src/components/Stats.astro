@@ -1,0 +1,55 @@
+---
+const stats = [
+  {
+    value: "+200",
+    label: "Conjuntos administrados",
+    icon: "🏘️",
+    description: "en Colombia",
+  },
+  {
+    value: "+50K",
+    label: "Residentes activos",
+    icon: "👥",
+    description: "en la plataforma",
+  },
+  {
+    value: "+1M",
+    label: "Transacciones procesadas",
+    icon: "⚡",
+    description: "el último año",
+  },
+  {
+    value: "99.9%",
+    label: "Disponibilidad garantizada",
+    icon: "🛡️",
+    description: "SLA certificado",
+  },
+];
+---
+
+<section class="relative bg-slate-950 py-20 overflow-hidden">
+  <div
+    class="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {
+        stats.map((stat) => (
+          <div class="text-center p-6 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-slate-700 transition-colors group cursor-default">
+            <div class="text-3xl mb-3">{stat.icon}</div>
+            <div class="text-3xl lg:text-4xl font-extrabold text-white mb-1 group-hover:text-amber-400 transition-colors">
+              {stat.value}
+            </div>
+            <div class="text-slate-300 font-semibold text-sm mb-1">
+              {stat.label}
+            </div>
+            <div class="text-slate-600 text-xs">{stat.description}</div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
